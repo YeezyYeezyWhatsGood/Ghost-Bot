@@ -93,8 +93,8 @@ async def on_message(message):
                         currentLetters = ""
                 for member in partyMembers:
                     if (score[member] == "GHOST"):
-                        await client.send_message(message.channel, "Sorry, " + partyMembers[member].mention + ", but you have GHOST and have been eliminated!")
-                        partyMembers.remove(partyMembers[member])
+                        await client.send_message(message.channel, "Sorry, " + member.mention + ", but you have GHOST and have been eliminated!")
+                        partyMembers.remove(member)
                         currentLetters = ""
                 def newMoveNumber():
                     return moveNumber
